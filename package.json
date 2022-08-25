@@ -47,7 +47,39 @@
 				"scopeName": "source.vba",
 				"path": "./out/vba.tmGrammar.json"
 			}
-		]
+		],
+		"commands": [
+			{
+				"command": "vba.extract",
+				"title": "VBA: Extract code from office file."
+			},
+			{
+				"command": "vba.write",
+				"title": "VBA: Write code to office file."
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "vba.extract",
+					"when": "false"
+				},
+				{
+					"command": "vba.write",
+					"when": "false"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "vba.extract",
+					"when": "resourceExtname in vba.fileExts"
+				},
+				{
+					"command": "vba.write",
+					"when": "resourceExtname in vba.fileExts"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"compile": "tsc -p ./",
