@@ -1,0 +1,3 @@
+If FOO = True Or FOO > 0 Then
+ElseIf FOO = False AndAlso FOO > 0 OrElse MyVar IsNot Val then
+End If
